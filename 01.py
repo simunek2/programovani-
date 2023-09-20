@@ -5,3 +5,5 @@ for x in range(10):
 
 print(zaklad)
 
+soucet=0
+for cislo in range (1,101)
