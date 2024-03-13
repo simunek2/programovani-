@@ -1,0 +1,17 @@
+%%manim -v WARNING -qm Intro
+
+
+class Intro(Scene):
+    def construct(self):
+        
+        triangle = Triangle(color=RED)
+        circle = Circle(color=BLUE)
+
+        # napsaní čtverce a kruhu na scénu
+        self.play(Write(triangle), Write(circle))
+        
+        square = Square(color=WHITE)
+        
+        self.play(Write(square)
+
+     
