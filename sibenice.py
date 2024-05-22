@@ -42,5 +42,8 @@ while True:
             counter = counter + 1
             print(hadane_pismeno, "tam neni.")
             print("pocet_chyb_je",counter)
+            if counter == 9:
+                print("PROHRÁL_JSI")
+                break
     pouzita_pismena.append(hadane_pismeno)
     
