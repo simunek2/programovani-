@@ -2,20 +2,34 @@ import turtle               # allows us to use the turtles library
 wn = turtle.Screen()        # creates a graphics window
 t = turtle.Turtle()
 
-counter=0
+counter = 0
 
 slovo = "postel"
 znak = len(slovo)
 pocet_znak = 0
+cislo = int(znak)
 
 uhodnuta_pismena = []
 pouzita_pismena = []
 
+for _ in range(cislo):
+        print("_", end=" ")
+
+print()
+
 while True:
+
     hadane_pismeno = input("zadej_pismeno: ")
+
+    if len(hadane_pismeno) != 1:
+        print("pouze_jedno_pismeno")
+        continue
 
 
     je_tam = hadane_pismeno in slovo
+
+    if hadane_pismeno == "`":
+        break
 
     if hadane_pismeno in pouzita_pismena:
         print("uz_si hadal")
