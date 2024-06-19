@@ -1,11 +1,16 @@
+import random
+hlavni_mesta_evropy = ["tirana", "andorra la vella", "jerevan", "vídeň", "baku", "minsk", "brusel", "sarajevo", "sofie", "záhřeb", "nikósie", "praha", "kodaň", "tallinn", "helsinky", "paříž", "tbilisi", "berlín", "atény", "budapešť", "reykjavík", "dublin", "řím", "nur-sultan (astana)", "priština", "riga", "vaduz", "vilnius", "lucemburk", "valletta", "kišiněv", "monako", "podgorica", "amsterdam", "skopje", "oslo", "varšava", "lisabon", "bukurešť", "moskva", "san marino", "bělehrad", "bratislava", "lublaň", "madrid", "stockholm", "bern", "ankara", "kyjev", "londýn", "vatikán"]
+random_mesto = random.choice(hlavni_mesta_evropy)
+
 import turtle               # allows us to use the turtles library
 wn = turtle.Screen()        # creates a graphics window
 t = turtle.Turtle()
 
 counter = 0
 
-slovo = "postel"
-znak = len(slovo)
+slovo = random_mesto
+spravne = set(slovo)
+znak = len(spravne)
 pocet_znak = 0
 cislo = int(znak)
 
@@ -131,9 +136,9 @@ while True:
                 t.left(60)
                 t.forward(60)
                 print("PROHRÁL_JSI")
+                print("slovo bylo",slovo)
                 turtle.done()
                 break
 
      
     pouzita_pismena.append(hadane_pismeno)
-    
