@@ -8,14 +8,19 @@ t = turtle.Turtle()
 
 counter = 0
 
+
 slovo = random_mesto
+carka = len(slovo)
 spravne = set(slovo)
 znak = len(spravne)
 pocet_znak = 0
-cislo = int(znak)
+cislo = int(carka)
 
 uhodnuta_pismena = []
 pouzita_pismena = []
+
+if " " in slovo:
+    uhodnuta_pismena.append(" ")
 
 for _ in range(cislo):
         print("_", end=" ")
@@ -46,6 +51,7 @@ while True:
 
             if pocet_znak == znak:
                 print("VYHRAL_JSI")
+                print("mas", counter, "chyb")
                 break
             else:
                 for pismeno_ze_slova in slovo:
